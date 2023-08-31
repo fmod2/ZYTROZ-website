@@ -1,0 +1,5 @@
+This is a test file for Download Button. 
+
+If you want to download your own file then open script.js file, go to line.no 2 and replace the value of fileLink with your file url.
+
+For more info read this blog: https://www.codingnepalweb.com/download-button-with-timer-html-css-javascript/

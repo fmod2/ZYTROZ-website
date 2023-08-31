@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>mint FAQ</title>
+  <style>
+    .faq-container {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      padding: 10px;
+      background-color: #f9f9f9;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .faq-item:hover {
+      background-color: #eaeaea;
+    }
+
+    .faq-item .question {
+      font-weight: bold;
+    }
+
+    .faq-item .answer {
+      display: none;
+      margin-top: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f1f1f1;
+      animation: fade 0.5s ease;
+    }
+
+    .faq-item.open .answer {
+      display: block;
+    }
+
+    @keyframes fade {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    body{
+        background-color: darkslategray;
+    }
+  </style>
+</head>
+<body>
+  <div class="faq-container">
+    <div class="faq-item">
+      <div class="question">Will there be live events</div>
+      <div class="answer">maybe if we manage to fix it</div>
+    </div>
+    <div class="faq-item">
+      <div class="question">Will Servers run faster</div>
+      <div class="answer">Not fast but it will when people donate</div>
+    </div>
+    <div class="faq-item">
+      <div class="question">will there be per kill and wins vbucks</div>
+      <div class="answer">Sadly no but soon when we have it we will put it</div>
+    </div>
+    <!-- Add more FAQ items as needed -->
+  </div>
+
+  <script>
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach((item) => {
+      item.addEventListener('click', () => {
+        item.classList.toggle('open');
+      });
+    });
+  </script>
+</body>
+</html>

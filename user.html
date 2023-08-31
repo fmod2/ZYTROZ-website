@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> User </title>
+  <style>
+    .profile-card {
+      max-width: 400px;
+      margin: 0 auto;
+      background-color: #f1f1f1;
+      border-radius: 10px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .profile-card:hover {
+      transform: scale(1.05);
+    }
+
+    .profile-card img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+
+    .profile-card .username {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .profile-card .bio {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .profile-card .info {
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="profile-card">
+    <img src="IMG_2317.png" alt="Profile Image">
+    <div class="username">Charro Negro</div>
+    <div class="bio">i am the website Dev who created this</div>
+  </div>
+
+  <script>
+    const profileCard = document.querySelector('.profile-card');
+
+    profileCard.addEventListener('click', () => {
+      profileCard.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
